@@ -1564,7 +1564,7 @@ static void bbr_start_bw_probe_refill(struct sock *sk, u32 bw_probe_up_rounds)
 	struct tcp_sock *tp = tcp_sk(sk);
 	struct bbr *bbr = inet_csk_ca(sk);
 
-    bbr->inflight_hi = bbr->inflight_latest;
+	bbr->inflight_hi = bbr->inflight_latest;
 
 	bbr_reset_lower_bounds(sk);
 	bbr->bw_probe_up_rounds = bw_probe_up_rounds;
